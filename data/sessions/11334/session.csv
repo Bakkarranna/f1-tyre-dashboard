@@ -1,0 +1,2 @@
+session_key,session_type,session_name,date_start,date_end,meeting_key,circuit_key,circuit_short_name,country_key,country_code,country_name,location,gmt_offset,year,is_cancelled
+11334,Race,Race,2026-07-19T13:00:00+00:00,2026-07-19T15:00:00+00:00,1290,7,Spa-Francorchamps,16,BEL,Belgium,Spa-Francorchamps,02:00:00,2026,False

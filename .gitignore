@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.venv/
+venv/
+*.egg-info/
+build/
+dist/
+.DS_Store
+
+reports/
+
+# Cached OpenF1 API responses: re-fetched by scripts/fetch_openf1.py on
+# demand, and never read by the loader, which reads the per-session CSVs.
+data/cache/
