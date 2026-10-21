@@ -1,0 +1,2 @@
+session_key,session_type,session_name,date_start,date_end,meeting_key,circuit_key,circuit_short_name,country_key,country_code,country_name,location,gmt_offset,year,is_cancelled
+11361,Race,Race,2026-09-06T13:00:00+00:00,2026-09-06T15:00:00+00:00,1293,39,Monza,13,ITA,Italy,Monza,02:00:00,2026,False

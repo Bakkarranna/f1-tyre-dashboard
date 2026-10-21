@@ -1,0 +1,2 @@
+session_key,session_type,session_name,date_start,date_end,meeting_key,circuit_key,circuit_short_name,country_key,country_code,country_name,location,gmt_offset,year,is_cancelled
+9912,Race,Race,2025-09-07T13:00:00+00:00,2025-09-07T15:00:00+00:00,1268,39,Monza,13,ITA,Italy,Monza,02:00:00,2025,False
