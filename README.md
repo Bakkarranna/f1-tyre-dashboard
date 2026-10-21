@@ -37,12 +37,17 @@ python -m f1tyre sessions                       # the races on disk
 python -m f1tyre stints --session 11361         # per-stint and per-compound fits
 python -m f1tyre strategy --min-stint 8         # ranked stint plans
 python -m f1tyre strategy --safety-car          # same, with a Safety Car on lap 25
+python -m f1tyre report                         # write reports/RESULTS.md
+python -m f1tyre report --session 11361 --path report.md
 python -m f1tyre dashboard --html               # write reports/tyre_dashboard_<slug>.html
 ```
 
 Also installed as the `f1tyre` console script. Every command defaults to the
 newest race and accepts `--session` with either a session key or a directory
-slug.
+slug — except `report`, which defaults to every session in
+[data/sessions](data/sessions) and takes `--session` to narrow it to one race.
+`--path` sets the output location and `--top` how many strategies to list per
+race.
 
 ## Data
 
@@ -78,6 +83,14 @@ fixtures invented by hand — if the fetch script ever produced a table missing
 degradation curves with a fitted confidence band, a stint timeline for the whole
 field, and the ranked strategy table. Reports are written under `reports/`, which
 is gitignored because they are generated output.
+
+## Markdown report
+
+`python -m f1tyre report` writes the same numbers as one Markdown file — the
+repository's own [reports/RESULTS.md](reports/RESULTS.md) is generated this way,
+covering all three committed races. Like the dashboard, it lives under the
+gitignored `reports/` directory, so pass `--path` to keep a copy anywhere in the
+tree.
 
 ## License
 
