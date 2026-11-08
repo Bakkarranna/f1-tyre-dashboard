@@ -14,3 +14,6 @@ reports/
 # Cached OpenF1 API responses: re-fetched by scripts/fetch_openf1.py on
 # demand, and never read by the loader, which reads the per-session CSVs.
 data/cache/
+
+# leftover git history-rewrite log
+.filter-branch.log
