@@ -1,0 +1,29 @@
+name: identity check
+
+# Fail the build when any commit in this repository claims the wrong author.
+# A commit fails when it credits an AI tool or agent in its message, or when it
+# carries this account's name with an email that is not one of its emails, or
+# carries a mangled version of this account's name. Commits written by other
+# people are reported and never fail the build: their history is not ours to
+# rewrite.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  identity-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # The check reads the whole history, so a shallow clone would hide it.
+          fetch-depth: 0
+
+      - name: Check every commit for AI attribution or a malformed author
+        run: python3 .githooks/ci-identity-check.py
